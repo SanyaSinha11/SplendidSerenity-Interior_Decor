@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SplendidSerenity Home Decor</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="Image/logo.png">
+    </head>
+    <body>
+        <div id="navig">
+            <nav>
+                <img src="Image/image-removebg-preview.png" class="logo">
+                <ul>
+                    <li><a href="#front">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#serv">Services</a></li>
+                    <li><a href="store">Store</a></li>
+                </ul>
+                <button class="head-btn" style="margin-left: 27px;"><a href="#footer"> CONTACT US </a></button>
+                <button class="head-btn"><a href="/"> LOGIN </a></button>
+            </nav>
+        </div>
+        <div class="coverframe" id="front">
+            <div class="mySlides fade">
+              <img src="Image/cov-1.png" style="width: 100%; height: 485px;">
+            </div>
+            <div class="mySlides fade">
+              <img src="Image/cov-2.png" style="width:100%; height: 485px;">
+            </div>
+            <div class="mySlides fade">
+              <img src="Image/cov-3.png" style="width:100%; height: 485px;">
+              <button class="know"><a href="#about"> KNOW MORE </a></button>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <section id="three-tier">
+            <div class="bdg"><img src="Image/stamp.png" style="width: 12%; position: absolute; 
+                top: 620px; left: 190px;"></div>
+            <h1 style="font-size: 50px;"><u> INNOVATIVE IDEAS </u></h1>
+            <h2 style="font-size: 25px; margin-bottom: 50px;">STYLISH DESIGNS</h2>
+            <div class="bdg"><img src="Image/stamp2.png" style="width: 12%; position: absolute; 
+                top: 620px; right: 190px;"></div>
+            <div class="base">
+                <div class="box">
+                    <img src="Image/box.jpg" style="height: 70px; padding: 0;">
+                    <h3>PERFECTLY DESIGNED</h3><br>
+                    <p>Discover the epitome of style and sophistication with our meticulously 
+                        curated collections, thoughtfully designed to elevate your home decor to new 
+                        heights.
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="Image/box.jpg" style="height: 70px; padding: 0;">
+                    <h3>CAREFULLY PLANNED</h3><br>
+                    <p>We understand that choosing the perfect interior decor items for your home 
+                        is a significant decision.<br> Browse our extensive product catalog seamlessly 
+                        integrated into the designer tool.
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="Image/box.jpg" style="height: 70px; padding: 0;">
+                    <h3>SMARTLY EXECUTED</h3><br>
+                    <p>Experience your design vision come to life in real-time. Explore different furniture 
+                        arrangements, experiment with color schemes, and preview your design changes instantly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <img src="Image/about.jpeg">
+            <div class="abt">
+                <img src="Image/motto.png">
+                <h1 style="font-size: 30px;"><u> ABOUT </u></h1>
+                <br>
+                <hr>
+                <br>
+                <p>
+                    At Splendid Serenity, we're passionate about transforming houses into homes that reflect personality, style, 
+                    and comfort. With a dedicated team of skilled designers and artisans, we specialize in curating exquisite interior 
+                    decor solutions tailored to your unique vision. From timeless classics to contemporary marvels, our commitment to 
+                    quality craftsmanship and client satisfaction ensures every space we touch exudes elegance and charm.
+                    <br><br><i>"All exclusive brand dedicated to all the designers out their who wish to implement their ideas, reach out to us and 
+                    get our most skilled worker at your doorstep."</i>
+                    <br><br>
+                    <center><i class="fa fa-headphones" style="color: #748155; font-size: 22px;"> Get Support :  180 1800 2277 </i></center>
+                </p>
+            </div>
+        </section>
+
+        <section id="serv">
+            <h1 style="font-size: 50px;"><u> SERVICES </u></h1>
+            <div class="serv-cont">
+                <p>
+                " We offer comprehensive solutions to elevate your living spaces. From conceptualizing designs to sourcing premium furnishings,
+                 we ensure every detail aligns with your vision. With our exclusively curated 'Designer at Your Doorstep' service, our expert 
+                 designers bring creativity and expertise directly to your home, making the design process effortless and personalized. "
+                 </p>
+            </div>
+            <div class="icons">
+                <img src="Image/a.customized.png" alt="png">
+                <h3>Customized Product</h3>
+            </div>
+            <div class="icons">
+                <img src="Image/a.design.png" alt="png">
+                <h3>Unique Designs</h3>
+            </div>
+            <div class="icons">
+                <img src="Image/a.delivery.png" alt="png">
+                <h3>Free Delivery</h3>
+            </div>
+            <div class="icons">
+                <img src="Image/a.price.png" alt="png">
+                <h3>Affordable Goods</h3>
+            </div>
+        </section>
+
+        <section id="new-arr">
+            <h1 style="font-size: 50px;"><u> NEW ARRIVALS </u></h1>
+            <div class="four-tier">
+                <div class="arr">
+                    <img src="Image/new-arr1.jpg" style="width: 70%; height: 70%" alt="Wall Art">
+                    <h3>Blue Harmony Metal Wall Art</h3>
+                    <center><button class="see" style="margin-top:20px;"><a href="store.html"> See More </a></button></center>
+                </div>
+                <div class="arr">
+                    <img src="Image/new-arr2.jpg" style="width: 70%; height: 70%" alt="Book-Shelf">
+                    <h3>Wooden Black-White Modern Book-shelf</h3>
+                    <center><button class="see"><a href="store.html"> See More </a></button></center>
+                </div>
+                <div class="arr">
+                    <img src="Image/new-arr3.jpg" style="width: 70%; height: 70%" alt="Swing Chair">
+                    <h3>Boho Swing Chair</h3>
+                    <center><button class="see" style="margin-top:20px;"><a href="store.html"> See More </a></center>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="footer-col">
+                <h3>HAVE ANY QUERY ?</h3>
+                <p>Kindly drop your query here, or call on our customer-care.</p>
+                <div class="sub">
+                    <form>
+                    <textarea name="message" rows="10" cols="30"></textarea>
+                    <br>
+                    <input type="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>LINKS</h3>
+                <li>Home</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Store</li>
+            </div>
+            <div class="footer-col">
+                <h3>SERVICES</h3>
+                <li>Architectural Design</li>
+                <li>Interior Design</li>
+                <li>Lighting Design</li>
+                <li>Furniture</li>
+            </div>
+            <div class="footer-col">
+                <h3>CONTACT US</h3>
+                <li><i class="fa fa-address-book" style="font-size: 15px; color: white;">
+                    : +91 90XXXXXX42
+                </i></li>
+                <li><i class="fa fa-envelope" style="font-size: 15px; color: white;">
+                    : Sanya.105909@stu.upes.ac.in
+                </i></li>
+                <li><i class="fa fa-map-marker" style="font-size: 15px; color: white;">
+                    : Bidholi, Dehradun, Uttarakhand
+                </i></li>
+                <br>
+                <li>
+                    <a href="https://github.com/SanyaSinha11" target="_blank" style="text-decoration: none;">
+                        <i class="fa fa-github-square"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sanya-sinha-a859ab244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="text-decoration: none;">
+                        <i class="fa fa-linkedin" style="padding: 0 2vw;"></i>
+                    </a>
+                    <a href="https://pin.it/MvsodlvxQ" target="_blank">
+                        <i class="fa fa-pinterest-square"></i>
+                    </a>
+                </li>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2024 Sinha Corp. 'SplendidSerenity' ||  All rights reserved.</p>
+            </div>
+        </section>
+    </body>
+</html>

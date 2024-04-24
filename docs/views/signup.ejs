@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>LOGIN/SIGNUP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="Image/logo.png">
+</head>
+<body>
+    <div id="navig">
+        <nav>
+            <img src="Image/image-removebg-preview.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Store</a></li>
+            </ul>
+            <button class="head-btn"> CONTACT US </button>
+            <button class="head-btn"><a href="/"> LOGIN </a></button>
+        </nav>
+    </div>
+    <div class="section">
+		<div class="sec-box">
+			<div class="box-log">
+				<div class="center-wrap">
+					<form method="post" action="/submit">
+                        <h4>Sign Up</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-style" name="fname" placeholder="Full Name" required>
+                            <i class="input-icon uil uil-user"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="tel" class="form-style" name="phnum" placeholder="Phone Number" required>
+                            <i class="input-icon uil uil-phone"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="email" class="form-style" name="email" placeholder="Email" required>
+                            <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="password" class="form-style" name="passw" placeholder="Password" required>
+                            <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <a href="index.ejs"><input type="submit" class="submit" value="Register"></a>		      					
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

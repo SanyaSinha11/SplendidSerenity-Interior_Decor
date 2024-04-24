@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SplendidSerenity Home Decor-Store</title>
+        <link rel="icon" type="image/x-icon" href="Image/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background-color: #8A9EA7;
+                height: 100vh;
+                overflow-x: hidden;
+            }
+            #navig {
+                top: 0;
+                width: 100%;
+                height: 70px;
+                background-color: #E8DFE0;
+                position: fixed;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                z-index: 900;
+            }
+            .logo {
+                width: 230px;
+                height: auto;
+            }
+            nav {
+                display: flex;
+                align-items: center; 
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+            }
+            nav ul li a {
+                margin: 0 50px;
+                position: relative;
+                color: #fff;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: bold;
+                display: inline-block;
+                transition: color 0.3s;
+                padding: 7px 15px 7px 17px;
+            }
+            nav ul li a:hover {
+                color: #8d9b6a;
+            }
+            nav ul li a::before {
+                content: "";
+                position: absolute;
+                width: 93%;
+                height: 2px;
+                background-color: #8d9b6a;
+                bottom: 0;
+                left: 2px;
+                transform: scale(0);
+                transform-origin: bottom right;
+                transition: transform 0.3s ease-in;
+            }
+            nav ul li a:hover::before {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+            .head-btn {
+                margin: 0 15px;
+                padding: 3px 7px;
+                cursor: pointer;
+                border-radius: 20px;
+                background: none; 
+                border: 2px solid #8d9b6a; 
+                outline: none; 
+                color: #8d9b6a;
+                font-weight: bold;
+                overflow: hidden;
+                box-shadow: #b5c983ef;
+                transition: transform 0.3s ease;
+            }
+            .head-btn:hover {
+                background-color: #8d9b6a;
+                color: #fff; 
+                transform: scale(1.1);
+            }
+            .head-btn a {
+                color: #8d9b6a;
+                text-decoration: none;
+            }
+            .head-btn a:hover {
+                color: #fff;
+            }
+
+            video {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                opacity: 0.4;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            #content {
+                color: #E8DFE0;
+                text-align: center;
+                margin-top: 240px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            #content .row {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                padding: 30px 5px;
+                margin-left: 100px ;
+            }
+            #content .column {
+                -ms-flex: 35%;
+                flex: 35%;
+                max-width: 45%;
+                padding: 0 7px;
+            }
+            #content .column img {
+                margin-top: 8px;
+                vertical-align: middle;
+                width: 100%;
+            }
+            img:hover {
+                transition: 1s;
+                transform: scale(0.9);
+                box-shadow: 0 0 15px #dab692cc;
+            }
+
+            #content .living {
+                margin-top: 160px;
+                background-color: #E8DFE0;
+                color: #8f5b34;
+                text-align: center;
+                padding: 40px 10px 10px 10px;
+            }
+            #content .bed {
+                margin-top: 100px;
+                background-color: #8A9EA7;
+                color: #fff;
+                text-align: center;
+                padding: 40px 10px 10px 10px;
+            }
+            #content .lamp {
+                margin-top: 100px;
+                background-color: #E8DFE0;
+                color: #8f5b34;
+                text-align: center;
+                padding: 40px 10px 10px 10px;
+            }
+
+            #footer{
+                padding: 4vw 8vw;
+                background-color: #8d9b6a;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+            #footer .footer-col{
+                padding-bottom: 40px;
+            }
+            #footer h3{
+                color: white;
+                font-weight:600 ;
+                padding-bottom: 20px;
+            }
+            #footer li{
+                list-style: none;
+                color: #fff;
+                padding: 15px 0;
+                font-size: 15px;
+                cursor: pointer ;
+                transition: 0.3s ease;
+            }
+            #footer .footer-col li a i {
+                color: #fff;
+                font-size: 30px;
+                transition: transform 0.5s ease;
+            }
+            #footer .footer-col li a i:hover {
+                transform: scale(1.1);
+                color: #8f5b34;
+            }
+            #footer p{
+                color: aliceblue;
+            }
+            #footer .sub{
+                margin-top: 20px;
+            }
+            #footer .sub textarea {
+                border-radius: 5px;
+                border: 3px solid #734b2d;
+                background-color: #ffffff2b;
+                text-align: center;
+                font-weight: 600;
+                padding: 13px 35px;
+                font-size: 0.9rem;
+            }
+            #footer input{
+                padding: 10px 15px;
+                margin-top: 10px;
+                border: 3px solid #734b2d;
+                background: none;
+                color: #734b2d;
+                border-radius: 15px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.6s ease;
+            }
+            #footer input:hover {
+                background-color: #8f5b34;
+                color: #fff;
+                transform: scale(1.1);
+            }
+            #footer .icon {
+                margin-bottom: 40px;
+            }
+            #footer .copyright {
+                padding: 1vw 22vw;
+                font-weight: bold;
+            }
+            
+            @media screen and (max-width: 1200px) {
+                .logo {
+                    width: 100px;
+                }
+                .head-btn {
+                    margin: 0 10px;
+                    padding: 3px 5px;
+                    font-size: 10px;
+                    margin-left: 15px !important;
+                }
+            }
+            @media screen and (min-width: 800px) and (max-width: 1100px) {
+                nav ul li a {
+                    margin: 0 20px;
+                    font-size: 12px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .column {
+                    -ms-flex: 50%;
+                    flex: 50%;
+                    max-width: 50%;
+                }
+                nav ul li a {
+                    margin: 0 18px;
+                    font-size: 10px;
+                }
+            }
+            @media screen and (max-width: 400px) {
+                .column {
+                    -ms-flex: 100%;
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navig">
+            <nav>
+                <img src="Image/image-removebg-preview.png" class="logo">
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="home#about">About</a></li>
+                    <li><a href="home#serv">Services</a></li>
+                    <li><a href="store">Store</a></li>
+                </ul>
+                <button class="head-btn" style="margin-left: 27px;"><a href="#footer"> CONTACT US </a></button>
+                <button class="head-btn"><a href="/"> LOGIN </a></button>
+            </nav>
+        </div>
+        <video autoplay loop muted>
+            <source src="Image/cov-video.mp4" type="video/mp4">
+        </video>
+
+        <section id="content">
+            <h1 style="font-size: 90px;"><i> STORE </i></h1>
+            <h1 style="font-size: 20px;">Contact . Reserve . Purchase</h1>
+            <div class="living">
+                <h2 style="font-size: 50px;"><u>LIVING ROOM</u></h2>
+                <div class="row">
+                    <div class="column">
+                        <img src="Image/h1.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/h2.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/h3.jpg" style="width: 100%;"><br><br>
+                    </div>
+                    <div class="column">
+                        <img src="Image/h5.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/h4.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/h6.jpg" style="width: 100%;"><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="bed">
+                <h2 style="font-size: 50px;"><u>BEDROOM</u></h2>
+                <div class="row">
+                    <div class="column">
+                        <img src="Image/i1.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/i5.jpeg" style="width: 100%;"><br><br>
+                        <img src="Image/i4.jpg" style="width: 100%;"><br><br>
+                    </div>
+                    <div class="column">
+                        <img src="Image/i6.jpeg" style="width: 100%;"><br><br>
+                        <img src="Image/i3.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/i2.jpg" style="width: 100%;"><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="lamp">
+                <h2 style="font-size: 50px;"><u>Lamps</u></h2>
+                <div class="row">
+                    <div class="column"><img src="Image/j1.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/j3.jpeg" style="width: 100%;"><br><br>
+                        <img src="Image/j5.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/j8.jpg" style="width: 100%;"><br><br>
+                    </div>
+                    <div class="column">
+                        <img src="Image/j4.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/j2.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/j6.jpg" style="width: 100%;"><br><br>
+                        <img src="Image/j7.jpg" style="width: 100%;"><br><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="footer">
+            <div class="footer-col">
+                <h3>HAVE ANY QUERY ?</h3>
+                <p>Kindly drop your query here, or call on our customer-care.</p>
+                <div class="sub">
+                    <form>
+                    <textarea name="message" rows="10" cols="30"></textarea>
+                    <br>
+                    <input type="submit">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>LINKS</h3>
+                <li>Home</li>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Store</li>
+            </div>
+            <div class="footer-col">
+                <h3>SERVICES</h3>
+                <li>Architectural Design</li>
+                <li>Interior Design</li>
+                <li>Lighting Design</li>
+                <li>Furniture</li>
+            </div>
+            <div class="footer-col">
+                <h3>CONTACT US</h3>
+                <li><i class="fa fa-address-book" style="font-size: 15px; color: white;">
+                    : +91 90XXXXXX42
+                </i></li>
+                <li><i class="fa fa-envelope" style="font-size: 15px; color: white;">
+                    : Sanya.105909@stu.upes.ac.in
+                </i></li>
+                <li><i class="fa fa-map-marker" style="font-size: 15px; color: white;">
+                    : Bidholi, Dehradun, Uttarakhand
+                </i></li>
+                <br>
+                <li>
+                    <a href="https://github.com/SanyaSinha11" target="_blank" style="text-decoration: none;">
+                        <i class="fa fa-github-square"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sanya-sinha-a859ab244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="text-decoration: none;">
+                        <i class="fa fa-linkedin" style="padding: 0 2vw;"></i>
+                    </a>
+                    <a href="https://pin.it/MvsodlvxQ" target="_blank">
+                        <i class="fa fa-pinterest-square"></i>
+                    </a>
+                </li>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; 2024 Sinha Corp. 'SplendidSerenity' ||  All rights reserved.</p>
+            </div>
+        </section>
+    </body>
+</html>

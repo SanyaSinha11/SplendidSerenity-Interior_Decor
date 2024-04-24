@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to bottom, #E8DFE0 0%, #E8DFE0 40%, #8A9EA7 40%, #8A9EA7 100%) !important;
+    height: 100vh;
+    overflow-x: hidden;
+}
+#navig {
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #E8DFE0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 900;
+}
+.logo {
+    width: 230px;
+    height: auto;
+}
+nav {
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul li a {
+    margin: 0 50px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s;
+    padding: 7px 15px 7px 17px;
+}
+nav ul li a:hover {
+    color: #8d9b6a;
+}
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 93%;
+    height: 2px;
+    background-color: #8d9b6a;
+    bottom: 0;
+    left: 2px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in;
+}
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.head-btn {
+    margin: 0 15px;
+    padding: 3px 7px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: none; 
+    border: 2px solid #8d9b6a; 
+    outline: none; 
+    color: #8d9b6a;
+    font-weight: bold;
+    overflow: hidden;
+    box-shadow: #b5c983ef;
+    transition: transform 0.3s ease;
+}
+.head-btn:hover {
+    background-color: #8d9b6a;
+    color: #fff; 
+    transform: scale(1.1);
+}
+.head-btn a {
+    color: #8d9b6a;
+    text-decoration: none;
+}
+.head-btn a:hover {
+    color: #fff;
+}
+
+.mySlides {
+    display: none;
+    margin-top: 70px;
+    animation: 2s ease-in;
+}
+.mySlides img {
+    vertical-align: middle;
+}
+.coverframe {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+.know {
+    padding: 5px 10px;
+    bottom: 60px;
+    display: flex;
+    margin-left: 44.5%;
+    cursor: pointer;
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    outline: none;
+    color: #fff;
+    border: 3px solid #fff;
+    box-shadow: #dab692d4;
+    background: #8A9EA7;
+    transition: transform 0.3s ease;
+}
+.know a {
+    text-decoration: none;
+    color: #fff;
+}
+.know:hover {
+    transform: scale(1.1);
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 10px 10px 0;
+    user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+.prev:hover, .next:hover {
+    background-color: #e8dfe097;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    position: relative;
+    margin: 0 2px;
+    top: -20px;
+    background-color:rgb(88, 85, 85);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #a28383c1;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+#three-tier{
+    margin-top: 10px;
+    padding: 4vw 8vw 0 8vw;
+    text-align: center;
+    padding-bottom: 60px;
+    background-size: cover;
+    background: linear-gradient(to right, #E8DFE0 0%, #E8DFE0 36%, #8a9ea7cb 36%, #8a9ea7cb 64%, #E8DFE0 64%, #E8DFE0 100%) !important;
+    background-position: center;
+}
+#three-tier h1, h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    color: #734b2d;
+}
+#three-tier .box{
+    background: #DAB692;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 20px;
+    border: 1px solid #fff;    
+}
+#three-tier .box:hover{
+    background: #dab692ac;
+    transition: 1s;
+    transform: scale(1.09);
+    background-position: center;
+    box-shadow: 0 0 20px #8f5b34;
+}
+#three-tier .box h3{
+    font-size: 20px;
+    font-weight: bold;
+    color:#734b2d;
+    padding: 13px 0 10px 0;
+}
+#three-tier .box p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #8f5b34;
+    padding-bottom: 15px;
+}
+#three-tier .base{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr)) ;
+    grid-gap: 2rem;
+    margin-top: 30px;
+}
+
+#about {
+    margin-top: 10px;
+    padding: 6vw 8vw 20vw 8vw;
+    background-size: cover;
+    background-color: #8A9EA7;
+    display: flex;
+}
+#about img {
+    width: 56%;
+    box-shadow: 0 0 15px #fff;
+}
+#about .abt {
+    background: #E8DFE0;
+    color: #8d9b6a;
+    width: 50%;
+    text-align: left;
+    padding: 30px 30px;  
+    margin-top: 6%; 
+    margin-left: 33%;  
+    position: absolute; 
+    box-shadow: 0 0 15px #8d9b6a;
+}
+#about .abt img {
+    position: absolute;
+    box-shadow: none;
+    background-color: #fff;
+    outline: none;
+    border-radius: 50%;
+    width: 20%;
+    margin-top: -12%;
+    margin-left: 80%;
+}
+#about .abt h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#about .abt p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.5px;
+    padding-bottom: 8px;
+}
+
+#serv {
+    margin-top: 10px;
+    padding: 4vw 8vw 0 8vw;
+    text-align: center;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-color: #8d9b6a;
+    background-position: center;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#serv h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#serv .serv-cont {
+    background: #8a9ea762;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px; 
+}
+#serv .serv-cont p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    padding-bottom: 15px;
+    line-height: 24px;
+}
+#serv .icons {
+    text-align: center;
+    padding: 40px 40px;
+    display: inline-table;
+}
+#serv .icons img {
+    width: 8vw;
+}
+#serv .icons h3 {
+    font-size: 15px;
+    padding-bottom: 14px;
+}
+
+#new-arr {
+    margin-top: 10px;
+    padding: 4vw 8vw 0 8vw;
+    text-align: center;
+    padding-bottom: 70px;
+    background-size: cover;
+    background-color: #DAB692;
+    background-position: center;
+}
+#new-arr h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #E8DFE0;
+}
+#new-arr .four-tier {
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 1.5rem;
+    margin-top: 30px;
+}
+#new-arr .four-tier .arr {
+    background: rgba(0, 0, 0, 0.213);
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 30px;
+}
+#new-arr .four-tier .arr:hover {
+    background: rgba(0, 0, 0, 0.279);
+    transition: 1s;
+    transform: scale(1.09);
+    background-position: center;
+    box-shadow: 0 0 20px #ffffff95;
+}
+#new-arr .arr h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color:#fff;
+    padding: 13px 10px 20px 10px;
+}
+#new-arr .arr .see {
+    padding: 5px 10px;
+    bottom: 20px;
+    display: flex;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    outline: none;
+    border: 3px solid #E8DFE0;
+    box-shadow: #dab692d4;
+    background: none;
+    transition: transform 0.3s ease;
+}
+#new-arr .arr .see a{
+    color: #E8DFE0;
+    text-decoration: none;
+}
+
+
+#footer{
+    padding: 4vw 8vw;
+    background-color: #8d9b6a;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+#footer .footer-col{
+    padding-bottom: 40px;
+}
+#footer h3{
+    color: white;
+    font-weight:600 ;
+    padding-bottom: 20px;
+}
+#footer li{
+    list-style: none;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 15px;
+    cursor: pointer ;
+    transition: 0.3s ease;
+}
+#footer .footer-col li a i {
+    color: #fff;
+    font-size: 30px;
+    transition: transform 0.5s ease;
+}
+#footer .footer-col li a i:hover {
+    transform: scale(1.1);
+    color: #8f5b34;
+}
+#footer p{
+    color: aliceblue;
+}
+#footer .sub{
+    margin-top: 20px;
+}
+#footer .sub textarea {
+    border-radius: 5px;
+    border: 3px solid #734b2d;
+    background-color: #ffffff2b;
+    text-align: center;
+    font-weight: 600;
+    padding: 13px 35px;
+    font-size: 0.9rem;
+}
+#footer input{
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: 3px solid #734b2d;
+    background: none;
+    color: #734b2d;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+}
+#footer input:hover {
+    background-color: #8f5b34;
+    color: #fff;
+    transform: scale(1.1);
+}
+#footer .icon {
+    margin-bottom: 40px;
+}
+#footer .copyright {
+    padding: 1vw 22vw;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 400px) {
+  .prev, .next, .know {font-size: 11px}
+}
+@media screen and (max-width:300px) {
+    #about {
+        padding-bottom: 200%;
+    }
+    #about p {
+        font-size: 8px;
+    }
+    .coverframe {
+        max-height: 60%;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    #about {
+        padding-bottom: 150% ;
+      }
+    nav ul li a {
+        margin: 0 10px;
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    #about {
+        padding-bottom: 90% ;
+      }
+    nav ul li a {
+        margin: 0 18px;
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+    #about {
+        padding-bottom: 45% ;
+      }
+    nav ul li a {
+        margin: 0 20px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1050px) {
+    #three-tier .bdg img {
+        display: none;
+      }
+}
+@media screen and (max-width: 1200px) {
+    .logo {
+        width: 100px;
+    }
+    .head-btn {
+        margin: 0 10px;
+        padding: 3px 5px;
+        font-size: 10px;
+        margin-left: 15px !important;
+    }
+    p {
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 17px;
+    }
+    
+}
